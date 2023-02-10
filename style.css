@@ -1,0 +1,170 @@
+body {
+	   font-family:albondigas;
+	}
+	nav {
+	position:fixed;
+	background:black;
+	left:0px;
+	top:0px;
+	right:0px;
+	height:45px;
+	}
+	.menubutton {
+	background:transparent;
+	outline:none;
+	border:none;
+	display:block;
+	position:relative;
+	float:left;
+	top:6px;
+	left:4px;
+	}
+	i {
+	font-size:20px;
+	}
+	.menucbutton {
+	background:transparent;
+	outline:none;
+	border:none;
+	font-size:40px;
+	float:left;
+	position:relative;
+	top:-4px;
+	display:none;
+	font-size:50px;
+	color:white;
+	}
+	
+	hr {
+	width:24px;
+	border:1px solid white;
+	border-radius:4px;
+	}.menuitems 
+	{
+	display:none;
+	text-align:left;
+	height:800px;
+	top:45px;
+	position:absolute;
+	background:white;
+	font-size:15px;
+	width:90%;
+	font-family:swiss;
+	}
+	.infotext {
+	  margin:10px;
+	  color:white;
+	  text-decoration:none;
+	}
+	.menuitems {
+	  background-color:black;
+	}
+	header img {
+	width:95%;
+	height:130px;
+	}
+	 header {
+	  background-color:black;
+	  padding:120px 30px;
+	  margin:-7.77px;
+	 }
+	 
+	 header button {
+	   color:white;
+	   background:transparent;
+	   padding:15px 23px;
+	   outlinr:none;
+	   border:1px solid white;
+	   outline:none;
+	 }
+	 header p{
+	   color:white;
+	   line-height:26px;
+	 }
+	 header button:active {
+	 color:black;
+	 background:white;
+	 }
+	 h1 {
+	   line-height:35px;
+	 }
+	 .info1 {
+	   padding:110px 20px;
+	   color:white;
+	   background-color:#1a1a1d;
+	   margin:-7.77px;
+	   line-height:27px;
+	 }
+	 .info1 button {
+	   color:white;
+	   border:1px solid white;
+	   background:transparent;
+	   padding:15px 23px;
+	   margin-left:25px;
+	   margin-top:19px;
+	   outline:none;
+	 }
+	 .info1 button:active {
+	   color:#1a1a1d;
+	   background:white;
+	 }
+	 .info1 textarea {
+	   background:transparent;
+	   font-size:17px;
+	   padding:10px;
+	   border:1px solid white;
+	   outline:none;
+	   height:100px;
+	   color:white;
+	 }.info1 input {
+	 background:transparent;
+	 font-size:17px;
+	 padding:10px;
+	 border:1px solid white;
+	 color:white;
+	 }
+	 .info2 {
+	   text-align:center;
+	   padding:110px 20px;
+	   color:white;
+	   background-color:#181818;
+	   margin:-7.77px;
+	   line-height:27px;
+	   
+	 }
+	 .info2 textarea {
+	 background:transparent;
+	 font-size:17px;
+	 padding:10px;
+	 border:1px solid white;
+	 outline:none;
+	 color:white;
+	 height:100px;
+	 }.info2 textarea {
+	 background:transparent;
+	 font-size:17px;
+	 padding:10px;
+	 border:1px solid white;
+	 outline:none;
+	 color:white;
+	 }
+	 .info2 button {
+	   color:white;
+	   border:1px solid white;
+	   background:transparent;
+	   padding:15px 23px;
+	   margin-top:17px;
+	   outline:none;
+	 }
+	 .info2 button:active {
+	   color:#181818;
+	   background-color:white;
+	 }
+	 
+	 footer p {
+	    color:white;
+	    text-align:center;
+	 }
+	 footer a {
+	    color:white;
+	 }
