@@ -103,5 +103,31 @@ function SuggestPwd() {
 	 var z = document.getElementById("mc")
 	 z.style.display ="none"
 	 }
+function CheckPwd() {
+  var password = document.getElementById("ypwd").value;
+  var strengthBar = document.querySelector("input[readonly]");
 
-	 
+  // Define the rules and their corresponding scores
+  var rules = [
+    { pattern: /\d/, score: 1, description: "At least one number" },
+    { pattern: /[A-Z]/, score: 1, description: "At least one uppercase letter" },
+    { pattern: /[\W_]/, score: 1, description: "At least one special character" },
+    { pattern: /[a-z]/, score: 1, description: "At least one lowercase letter" },
+    { pattern: /^.{7,}$/, score: 1, description: "At least 7 characters" }
+  ];
+
+  // Calculate the password strength score based on the rules
+  var score = rules.reduce(function(acc, rule) {
+    return acc + (rule.pattern.test(password) ? rule.score : 0);
+  }, 0);
+
+  // Set the strength bar color based on the score
+  var colors = ["red", "orange", "yellow", "lightgreen", "green"];
+  var color = colors[Math.min(Math.floor(score / 2), 4)];
+  strengthBar.style.backgroundColor = color;
+
+  // Set the strength bar text based on the score
+  var texts = ["Very weak", "Weak", "Fair", "Strong", "Very strong"];
+  var text = texts[Math.min(Math.floor(score / 2), 4)];
+  strengthBar.value = "Strength - " + (score * 20) + "% (" + text + ")";
+}
