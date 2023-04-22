@@ -60,8 +60,9 @@ body {
 	  background-color:black;
 	}
 	header img {
-	width:95%;
+	width:96%;
 	height:130px;
+	border-radius:10px;
 	}
 	 header {
 	  background-color:black;
