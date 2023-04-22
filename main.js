@@ -1,3 +1,34 @@
+function TextToMc() {
+  var inputText = document.getElementById("text12").value;
+  var result = "";
+  
+  for (var i = 0; i < inputText.length; i++) {
+    var character = inputText.charAt(i);
+    var hex = character.charCodeAt(0).toString(16);
+    var bin = parseInt(hex, 16).toString(2);
+    var hex2 = parseInt(bin, 2).toString(16);
+    var ascii = String.fromCharCode(parseInt(hex2, 16));
+    result += hex + bin + hex2 + ascii;
+  }
+  
+  document.getElementById("mcc").value = result;
+}
+function McToText() {
+  var inputCode = document.getElementById("text132").value;
+  var result = "";
+  
+  for (var i = 0; i < inputCode.length; i += 12) {
+    var ascii = inputCode.substr(i + 8, 1);
+    var hex2 = ascii.charCodeAt(0).toString(16);
+    var bin = parseInt(hex2, 16).toString(2);
+    var hex = inputCode.substr(i, 2);
+    var text = String.fromCharCode(parseInt(hex, 16));
+    result += text;
+  }
+  
+  document.getElementById("dmc").value = result;
+}
+
 function SuggestPwd() {
  var passwordWords = ['green', 'agent112', 'publish', 'devicE', 'initial', 'checkS', 'tiTLE', 'Sliced', 'monopoly', 'Kindom', 'search', 'website', 'coding', 'EMiNEm', 'clappING', 'WebWeb', 'Custard', 'alphabet', 'secret', 'unbreakable', 'encrypted', 'soCool', 'emptY', 'Immagine', 'Social', 'purplE', 'grEen', 'lEgend', 'FOCUSED', 'Hussle', 'systeM', 'Writer', 'Poetry', 'RedBlueGreen', '911cops', 'oxyGEN', 'leTTer', 'CHurCH', 'General', 'fashION', 'syLLabus', 'Spanish', 'PROtect', 'Charge', 'poLice', 'SCIence', 'PoultrY', 'Adverb', 'Blogger', 'PLANtain', 'gooFER', 'anDROID', 'miGhty', 'infinity', 'DomaIN', 'Dollars', 'AmeriCA', 'Forward', 'SpiDER', 'samSUNG', 'Twenty', 'DeserT', 'Angular', 'PROject', 'proNOUN', 'KeyBoard', '123easy', 'EasyPeasy', 'Ballerina', 'Kitchen', 'Sponge', 'Strength', 'Script', 'cherrY', 'Triangle', 'oClock', 'Military', 'RanDom', 'Numbers', 'Flourish', 'thirty', 'hundred', 'scorpion', 'Burret', 'healTHy', 'loverR', 'Carring', 'yesyesyes', 'Artificial', 'UpDown', 'InDuStRy', 'FESTIval', 'Carring', 'BootStrap', 'Styling', 'DuckDuck', 'WresTLE', 'HardTimes', 'Remeber', 'forGOT', 'DiaMond', 'Monday', 'alarmed', 'Adjacent', 'Sparked', 'President', 'soManY' , 'Scared', 'Crypto', 'Builders', 'percenT', 'Febuary', 'AccOunt', 'Action', 'reQUIRED', 'SaveUp', 'BiNaRy', 'Elephant', 'redcarpet', 'Everything', 'Maniac', 'maTrix', 'Sounded', 'cooKer', 'finiancE', 'RagRag', 'Cheater', 'GuesseD', 'SecurED', 'lifeHUB', 'hoBBer', 'danCing', 'SingING', 'BasKEt', 'Tounge', 'canCEL', 'FathER', 'DreaMer', 'BabyBoo', 'metalore', 'YouKnow', 'ToldMe', 'Favourite', "Bonbing", 'Telephone', 'Clothe', 'Fresher', 'Aspire', 'InSpiRe', 'EsPiRe', 'SooRich', '4Sure', 'SmartGo', 'ABCxyz'];
  var randomWordIndex = Math.floor(Math.random() * passwordWords.length);
